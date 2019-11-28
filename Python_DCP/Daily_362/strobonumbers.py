@@ -1,4 +1,5 @@
-## Find all Strobogrammtic numbers of size N digits. Basically a strobogrammatic number is one that appears the same after rotating 180 degrees.
+## Find all Strobogrammtic numbers of size N digits. Basically a strobogrammatic number is one that 
+# appears the same after rotating 180 degrees.
 
 def strobonumbers(expr, i, j):
     if (j < i):
