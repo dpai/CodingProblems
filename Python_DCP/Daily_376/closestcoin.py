@@ -29,6 +29,21 @@ Coins: [(0, 4), (1, 0), (2, 0), (3, 2)] """
 #Note the assumption here that the grid is not bounded in the positive direction and starting at (0,0), ie no negative indexes on cell
 #We need to initially look if there are coins on the grid to not risk infinite loop.
 
+#Insight V2: I realized a better way . Distance is simply number of steps in x + steps in y from start. For each coin, calculate the distance
+#and put it in a map, pick the key with smallest value. 
+
+def closestCoinV2(myPos, coins_on_grid):
+    arranged = {}
+
+    if len(coins_on_grid) == 0:
+        return None
+
+    for i in range(len(coins_on_grid)):
+        newPos = abs(myPos[0] - coins_on_grid[i][0]) + abs(myPos[1] - coins_on_grid[i][1])
+        arranged[coins_on_grid[i]] = newPos
+
+    return min(arranged, key=arranged.get)
+
 def closestCoin(myPos, coins_on_grid):
     if len(coins_on_grid) == 0:
         return None
@@ -62,3 +77,4 @@ if __name__ == "__main__":
     myPos = (0,2)
     Coins = [(0, 4), (1, 0), (2, 0), (3, 2)] 
     print("Closest Coin is ", closestCoin(myPos, Coins))
+    print("Version 2", closestCoinV2(myPos, Coins))
