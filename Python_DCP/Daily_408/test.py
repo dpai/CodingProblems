@@ -43,6 +43,11 @@ class TestMaxProfits(unittest.TestCase):
         K = 5
         self.assertEqual(maxprofit(arr,K), 0)
 
+    def testEdgeCase(self):
+        arr = [1]
+        K = 1
+        self.assertEqual(maxprofit(arr,K), 0)
+
 
 if __name__ == "__main__":
     unittest.main()
