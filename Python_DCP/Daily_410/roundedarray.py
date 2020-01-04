@@ -15,6 +15,13 @@ Write an algorithm that finds an appropriate Y array with the following properti
 For example, suppose your input is [1.3, 2.3, 4.4]. In this case you cannot do better than [1, 2, 5], 
 which has an absolute difference of |1.3 - 1| + |2.3 - 2| + |4.4 - 5| = 1. """
 
+## Insight - This is a recursion problem, where you need to find all configurations and chose the 
+## the one that satisfies the constraints. At each index basically you need to make a decision to 
+## floor or to ceil. Hence there are 2 execution paths, and you stop until you reach end of the 
+## array where you hit the base case and check if the 2 constraints are satisfied. If multiple
+## configurations satisfy chose one with minimum sum of absolute distance.
+## Runtime = O(2^n)
+
 import math
 
 def helper(i, inputarray, outputarray, absdiffarray, final_result):
