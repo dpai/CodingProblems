@@ -26,7 +26,7 @@ import math
 
 def helper(i, inputarray, outputarray, absdiffarray, final_result):
     if (i == len(inputarray)):
-        floatsum = int(sum(inputarray))
+        floatsum = round(sum(inputarray))
         opsum = sum(outputarray)
         absdiffsum = sum(absdiffarray)
         if (floatsum != opsum):
@@ -55,7 +55,7 @@ def roundinputarray(inputarr):
     return final_result[1]
 
 if __name__ == "__main__":
-    arr = [1.3, 2.3, 4.4]
+    arr = [1.6, 2.3, 4.4]
     print("Rounded array " + str(roundinputarray(arr)))
-    arr = [4.4]
+    arr = [2.3, 4.4]
     print("Rounded array " + str(roundinputarray(arr)))
