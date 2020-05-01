@@ -10,7 +10,7 @@
 ## Expecially good if the lists are very long. Note that if I had done a 2-way intersection and used the intersected 
 ## list to compare with the 3rd list, that will be a 2-pass O(n)
 ## Another note is that if the number of lists was variable, then the 2-pass technique is a much better option in
-## my opnion, since we will then need to maintain variable list of pointers which will be cumbersome.
+## my opinion, since we then do not need to maintain variable list of pointers which will be cumbersome.
 
 def intersection(list1, list2, list3):
   # Fill this in.
