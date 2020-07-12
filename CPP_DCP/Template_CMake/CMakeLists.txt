@@ -9,9 +9,10 @@ target_compile_features(project_options INTERFACE cxx_std_17)
 
 add_subdirectory(src)
 
-include(CTest)
+option(ENABLE_TEST "Turn on to enable tests" ON)
 
-if (BUILD_TESTING)
+if (ENABLE_TEST)
+    enable_testing()
     add_library(Catch INTERFACE)
     target_include_directories(Catch INTERFACE ${PROJECT_SOURCE_DIR}/import/)
     add_subdirectory(test)

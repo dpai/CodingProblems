@@ -20,7 +20,7 @@ void Solution::pushDominoes(std::string& dominoes)
     {
         if (dominoes[en] == 'L')
         {
-            if (dominoes[start] = 'R')
+            if (dominoes[start] == 'R')
                 make_one(start, en, dominoes);
             else
             {
