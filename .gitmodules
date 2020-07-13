@@ -1,0 +1,3 @@
+[submodule "CPP_DCP/Template_CMake/import/Catch2"]
+	path = CPP_DCP/Template_CMake/import/Catch2
+	url = https://github.com/catchorg/Catch2.git
