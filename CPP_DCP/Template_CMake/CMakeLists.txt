@@ -13,7 +13,11 @@ option(ENABLE_TEST "Turn on to enable tests" ON)
 
 if (ENABLE_TEST)
     enable_testing()
+    ## Download
+    execute_process(COMMAND git submodule update --init -- import/Catch2 
+                     WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR})
+    set(CATCH2_INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/import/Catch2/single_include)                 
     add_library(Catch INTERFACE)
-    target_include_directories(Catch INTERFACE ${PROJECT_SOURCE_DIR}/import/)
+    target_include_directories(Catch INTERFACE $<BUILD_INTERFACE:${CATCH2_INCLUDE_DIR}>)
     add_subdirectory(test)
 endif()
