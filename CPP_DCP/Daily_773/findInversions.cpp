@@ -72,4 +72,8 @@ int main()
     cout << "Inversions : " << FindInversions(arr) << endl;
 
     cout << "Inversions : " << FindInversions({5,4,3,2,1}) << endl;
+
+    cout << "Inversions : " << FindInversions({5,1,2,3,4}) << endl;
+
+    cout << "Inversions : " << FindInversions({5}) << endl;
 }
