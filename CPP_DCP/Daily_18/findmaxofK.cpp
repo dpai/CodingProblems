@@ -49,12 +49,3 @@ void findmaxOfK(vector<int>& ip, int k)
     cout << q.front() << "\n";
 }
 
-int main(int argc, char const *argv[])
-{
-    vector<int> ip = {10,5,2,7,8,7};
-    findmaxOfK(ip, 3);
-    ip = {7,7,7,7,7};
-    findmaxOfK(ip, 1);
-    return 0;
-}
-

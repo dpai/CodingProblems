@@ -64,16 +64,3 @@ int FindInversions(const vector<int>& arr)
     }
     return total;
 }
-
-int main()
-{
-    vector<int> arr{2,4,1,3,5};
-
-    cout << "Inversions : " << FindInversions(arr) << endl;
-
-    cout << "Inversions : " << FindInversions({5,4,3,2,1}) << endl;
-
-    cout << "Inversions : " << FindInversions({5,1,2,3,4}) << endl;
-
-    cout << "Inversions : " << FindInversions({5}) << endl;
-}
