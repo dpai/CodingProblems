@@ -32,8 +32,10 @@ endif()
 ## Problem Lists
 add_subdirectory(Daily_18)
 add_subdirectory(Daily_773)
+add_subdirectory(Daily_854)
 
 add_executable(Main main.cpp)
 target_link_libraries(Main PRIVATE project_options)
 target_link_libraries(Main PUBLIC daily_773)
 target_link_libraries(Main PUBLIC daily_18)
+target_link_libraries(Main PUBLIC daily_854)
