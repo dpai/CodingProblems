@@ -1,7 +1,7 @@
 import unittest
 from queuebystack import queue_stack
 
-class TestSmallestIndex(unittest.TestCase):
+class TestQueuAsStack(unittest.TestCase):
 
     def testExampleCase(self):
         arr = [-5, -3, 2, 3]
