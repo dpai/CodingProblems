@@ -11,6 +11,8 @@
 # point. If starting point is bigger we choose the smallest endpoint at the start of the cover. This is the invariant we maintain as
 # we traverse the loop.
 # TC = O(n) SC = O(1) , If we have to sort then it is O(nlogn)
+# Updated - If current interval is greater than the end cover point, only then update the end cover point. This update will ensure
+# the input intervals can be out of order
 
 def findmincover(intervals):
     min_int = -1
@@ -18,16 +20,18 @@ def findmincover(intervals):
     min_en = -1
     for k, v in intervals:
         if min_int == -1:
-            min_int = v
-            max_int = v
+            min_int = k
+            max_int = k
             min_en = v
             continue
 
-        max_int = k
+        #max_int = k
+        if (k > max_int):
+            max_int = k
         if (min_en > v):
             min_en = v
 
-        if (k < min_en):
+        if (max_int < min_en):
             min_int = k
         else:
             min_int = min_en
