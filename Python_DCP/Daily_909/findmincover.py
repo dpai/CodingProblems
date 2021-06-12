@@ -25,16 +25,9 @@ def findmincover(intervals):
             min_en = v
             continue
 
-        #max_int = k
-        if (k > max_int):
-            max_int = k
-        if (min_en > v):
-            min_en = v
-
-        if (max_int < min_en):
-            min_int = k
-        else:
-            min_int = min_en
+        max_int = max(k, max_int)
+        min_en = min(min_en, v)
+        min_int = min(max_int, min_en)
 
     return (min_int, max_int)
 

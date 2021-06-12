@@ -32,5 +32,10 @@ class TestQueuAsStack(unittest.TestCase):
         res = random.sample(intervals, len(intervals))
         self.assertEqual(findmincover(res), (3, 9))
 
+    def testMultipleOverlap2(self):
+        intervals = [(0, 5), (3, 6), (4, 7)]
+        res = random.sample(intervals, len(intervals))
+        self.assertEqual(findmincover(res), (4, 4))
+
 if __name__ == "__main__":
     unittest.main()
